@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+@import '../../src/css/core/block';
+
+.smb-directory-structure {
+  background-color: _lightest($_color-gray);
+  color: $_color-text;
+  @include _padding(.75, 1);
+
+  > *:not(:first-child) {
+    @include _margin-top(.25);
+  }
+
+  &__item {
+    p {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  .fa-fw {
+    width: auto;
+  }
+
+  &__item__name {
+    margin-left: .5rem;
+  }
+
+  &__item__list {
+    margin-left: 1.5rem;
+
+    > * {
+      @include _margin-top(.25);
+    }
+  }
+}

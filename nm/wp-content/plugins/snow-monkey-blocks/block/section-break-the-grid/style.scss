@@ -1,0 +1,245 @@
+@charset 'utf-8';
+
+@import '../../src/css/core/block';
+
+.smb-section-break-the-grid {
+  $imageSizes: (
+    140: 'l',
+    180: 'xl',
+  );
+
+  $contentSizes: (
+    60: 'xs',
+    80: 's',
+    120: 'l',
+    140: 'xl',
+  );
+
+  $contentHorizontalPositions: (
+    5: 'xs',
+    10: 's',
+    15: 'm',
+    20: 'l',
+    25: 'xl',
+  );
+
+  $contentTopVerticalPositions: (
+    100: 'txl',
+    80: 'tl',
+    60: 'tm',
+    40: 'ts',
+  );
+
+  $contentBottomVerticalPositions: (
+    40: 'bs',
+    60: 'bm',
+    80: 'bl',
+    100: 'bxl',
+  );
+
+  $contentPaddings: (
+    1: 's',
+    2: 'm',
+    3: 'l',
+  );
+
+  @include _media-min(lg) {
+    @each $key, $value in $contentTopVerticalPositions {
+      &--vertical-#{$value} {
+        .smb-section-break-the-grid__content {
+          margin-bottom: 1px * $key;
+        }
+
+        .smb-section-break-the-grid__figure {
+          margin-top: 1px * $key;
+        }
+      }
+    }
+
+    @each $key, $value in $contentBottomVerticalPositions {
+      &--vertical-#{$value} {
+        .smb-section-break-the-grid__content {
+          margin-top: 1px * $key;
+        }
+
+        .smb-section-break-the-grid__figure {
+          margin-bottom: 1px * $key;
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    @each $key, $value in $contentPaddings {
+      &--p-#{$value} {
+        @include _padding($key / 2);
+      }
+    }
+
+    @each $key, $value in $contentHorizontalPositions {
+      &--horizontal-#{$value} {
+        @include _margin-bottom(-2);
+      }
+    }
+
+    &--remove-outside-p {
+      padding-top: 0;
+    }
+
+    @include _media-min(lg) {
+      margin-bottom: 0;
+
+      @each $key, $value in $contentSizes {
+        &--w-#{$value} {
+          width: $key * 1%;
+        }
+      }
+
+      @each $key, $value in $contentPaddings {
+        &--p-#{$value} {
+          @include _padding($key);
+        }
+      }
+    }
+  }
+
+  &__figure {
+    position: relative;
+
+    @include _media-min(lg) {
+      @each $key, $value in $imageSizes {
+        &--w-#{$value} {
+          width: $key * 1%;
+        }
+      }
+    }
+
+    > img {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+  }
+
+  &__lede {
+    display: block;
+  }
+
+  &__shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.alignfull {
+    > .c-container {
+      max-width: none;
+    }
+  }
+
+  &--right,
+  &--left {
+    &.alignfull {
+      .smb-section-break-the-grid__figure {
+        @include _media-max(md) {
+          right: 0;
+          left: 0;
+          margin-right: calc(50% - 50vw);
+          margin-left: calc(50% - 50vw);
+        }
+      }
+    }
+  }
+
+  &--right {
+    .smb-section-break-the-grid__content {
+      @include _media-min(lg) {
+        @each $key, $value in $contentHorizontalPositions {
+          &--horizontal-#{$value} {
+            left: 1% * $key;
+          }
+        }
+
+        &--remove-outside-p {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .smb-section-break-the-grid__figure {
+      right: _space(-.5);
+
+      @include _media-min(md) {
+        right: _space(-1);
+      }
+
+      @include _media-min(lg) {
+        right: 0;
+
+        @each $key, $value in $imageSizes {
+          &--w-#{$value} {
+            margin-left: -1 * $key + 100%;
+          }
+        }
+      }
+    }
+
+    &.alignfull .smb-section-break-the-grid__figure {
+      @include _media-min(lg) {
+        right: _space(-1);
+      }
+    }
+  }
+
+  &--left {
+    > .c-container > .c-row {
+      flex-direction: row-reverse;
+    }
+
+    .smb-section-break-the-grid__content {
+      @include _media-min(lg) {
+        @each $key, $value in $contentHorizontalPositions {
+          &--horizontal-#{$value} {
+            right: 1% * $key;
+          }
+        }
+
+        @each $key, $value in $contentSizes {
+          &--w-#{$value} {
+            margin-left: 100 - $key * 1%;
+          }
+        }
+
+        &--remove-outside-p {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .smb-section-break-the-grid__figure {
+      left: _space(-.5);
+
+      @include _media-min(md) {
+        left: _space(-1);
+      }
+
+      @include _media-min(lg) {
+        left: 0;
+      }
+    }
+
+    &.alignfull .smb-section-break-the-grid__figure {
+      @include _media-min(lg) {
+        left: _space(-1);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+@import 'core/core';
+
+@import '../extension/editor';
+@import '../format/editor';
+@import '../style/editor';
+
+.sme-popover {
+  .components-popover__content {
+    overflow: visible;
+  }
+
+  /*
+  &__inner {
+    position: relative;
+    padding: 14px;
+  }
+
+  &.components-popover:not(.is-mobile) .components-popover__content {
+    min-width: 270px;
+  }
+
+  .components-base-control__field {
+    margin-bottom: 0;
+  }
+
+  .components-base-control__label {
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+
+  .components-color-palette {
+    padding: 0;
+  }
+
+  .sme-custom-colors-link {
+    position: absolute;
+    bottom: 14px;
+  }
+  */
+}
+
+.sme-extension-panel {
+  .components-panel__icon {
+    fill: _light($_color-gray);
+  }
+
+  &--enabled .components-panel__icon {
+    fill: $color-accent;
+  }
+}

@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+@import '../../src/css/core/block';
+
+.smb-faq {
+  &__item {
+    border-bottom: 1px solid _lighter($_color-gray);
+    @include _padding(1, 0);
+
+    &:first-child {
+      border-top: 1px solid _lighter($_color-gray);
+    }
+
+    &__question,
+    &__answer {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+
+      &__label {
+        flex: 0 0 0%;
+        @include _margin-right(1);
+        @include _font-size($_base-font-size-px * 1.5);
+        line-height: 1;
+        font-weight: normal;
+        color: $color-accent;
+      }
+
+      &__body {
+        flex: 1 1 auto;
+        @include content();
+      }
+    }
+
+    &__question {
+      @include _margin(0, 0, 1);
+      font-weight: bold;
+    }
+
+    &__answer {
+    }
+  }
+}

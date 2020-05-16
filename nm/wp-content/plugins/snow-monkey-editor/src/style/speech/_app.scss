@@ -1,0 +1,40 @@
+.is-style-sme-speech {
+  position: relative;
+  background-color: _lightest($_color-gray);
+  border-radius: $_border-radius;
+  width: fit-content;
+  text-align: left;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% - 7px);
+    left: _space(1.25);
+    @include _square(14px);
+    transform: rotate(45deg);
+    background-color: inherit;
+  }
+
+  &.has-text-align-center {
+    margin-right: auto;
+    margin-left: auto;
+
+    &::before {
+      left: calc(50% - 10px);
+    }
+  }
+
+  &.has-text-align-right {
+    margin-right: 0;
+    margin-left: auto;
+
+    &::before {
+      left: auto;
+      right: _space(1.25);
+    }
+  }
+}
+
+p.is-style-sme-speech {
+  @include _padding(.5, 1);
+}

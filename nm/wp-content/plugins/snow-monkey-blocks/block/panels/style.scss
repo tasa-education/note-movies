@@ -1,0 +1,153 @@
+@charset 'utf-8';
+
+@import '../../src/css/core/block';
+
+.smb-panels {
+  &__item {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    color: $_color-text;
+    text-decoration: none;
+    box-shadow: 0 0 35px 0 rgba(#000, .1);
+    text-align: center;
+    @include _transition(all);
+
+    @include _hover(lg) {
+      box-shadow: 0 7px 35px 0 rgba(#000, .15);
+    }
+
+    &__figure {
+      > img {
+        width: 100%;
+      }
+    }
+
+    &__body {
+      @include _padding(1);
+    }
+
+    &__title {
+      margin: 0;
+      @include _font-size-line-height($_base-font-size-px);
+      font-weight: bold;
+
+      a {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &__content {
+      @include _margin-top(.25);
+      @include _font-size-line-height($_base-font-size-px - 2);
+
+      a {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &__action {
+      @include _margin-top(.5);
+
+      > a {
+        text-decoration: none;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &__link {
+      color: $color-accent;
+      @include _font-size-line-height($_base-font-size-px - 2);
+    }
+  }
+
+  &__item--horizontal {
+    display: flex;
+    flex-direction: column;
+
+    @include _media-min(md) {
+      flex-direction: row;
+      text-align: left;
+
+      > .smb-panels__item__body {
+        flex: 1 1 auto;
+      }
+
+      > .smb-panels__item__figure {
+        position: relative;
+        max-width: 50%;
+        flex: 0 0 50%;
+        overflow: hidden;
+
+        @supports(object-fit: cover) {
+          flex: 1 0 auto;
+        }
+
+        img {
+          height: 100%;
+          max-width: none;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+
+          @supports(object-fit: cover) {
+            position: static;
+            max-width: 100%;
+            object-position: 50% 50%;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+      }
+
+      > .smb-panels__item__body {
+        align-self: center;
+      }
+    }
+
+    &.smb-panels__item--reverse {
+      > .smb-panels__item__figure {
+        order: 1;
+      }
+    }
+  }
+
+  &[data-image-padding="true"] {
+    .smb-panels__item__figure {
+      @include _padding(.5, .5, 0);
+
+      @include _media-min(md) {
+        @include _padding(.5, .5, 0);
+      }
+    }
+
+    .smb-panels__item--horizontal {
+      > .smb-panels__item__figure {
+        @include _media-min(md) {
+          @include _padding(.5, 0, .5, .5);
+        }
+      }
+
+      &.smb-panels__item--reverse {
+        > .smb-panels__item__figure {
+          @include _padding(0, .5, .5, .5);
+
+          @include _media-min(md) {
+            @include _padding(.5, .5, .5, 0);
+          }
+        }
+      }
+    }
+  }
+}

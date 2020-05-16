@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+
+@import 'core/block';
+
+@import '../../format/highlighter/format';
+@import '../../format/badge/format';
+
+.smb-section,
+.smb-btn-box,
+.smb-slider,
+.smb-pickup-slider {
+  & + .smb-section,
+  & + .smb-btn-box,
+  & + .smb-slider,
+  & + .smb-pickup-slider {
+    margin-top: 0;
+  }
+}
+
+.#{$_prefix}c-row {
+  @each $size, $screen-min in $_sizes {
+    @include _media-min($screen-min) {
+
+      @for $i from 1 through 6 {
+        $prefix: '';
+        @if $size != 'sm' {
+          $prefix: -#{$size};
+        }
+
+        &[data#{$prefix}-columns="#{$i}"] {
+          > .#{$_prefix}c-row__col {
+            @include _row__col--width(1 / $i * 100%);
+          }
+        }
+      }
+    }
+  }
+}

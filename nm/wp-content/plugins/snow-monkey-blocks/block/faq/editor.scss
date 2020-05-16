@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+.editor-styles-wrapper {
+  @import 'style';
+
+  .smb-faq {
+    &__item {
+      &__question {
+        &__label + .block-editor-rich-text {
+          flex: 1 1 auto;
+        }
+      }
+
+      &__answer {
+        &__body {
+          > .block-editor-inner-blocks {
+            > .block-editor-block-list__layout {
+              > .wp-block:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

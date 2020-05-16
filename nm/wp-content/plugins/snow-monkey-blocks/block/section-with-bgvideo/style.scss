@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+@import '../../src/css/core/block';
+
+.smb-section-with-bgvideo {
+  > .smb-section-with-bgimage__bgimage {
+    > iframe {
+      max-height: none;
+      max-width: none;
+      min-height: auto;
+      min-width: auto;
+      display: none;
+
+      @include _media-min(lg) {
+        display: block;
+      }
+    }
+
+    > img {
+      @include _media-min(lg) {
+        display: none;
+      }
+    }
+  }
+}
