@@ -33,4 +33,13 @@ require plugin_dir_path( __FILE__ ) . 'inc/sudo.php';
 require plugin_dir_path( __FILE__ ) . 'inc/class-my-snow-monkey-utility.php';
 require plugin_dir_path( __FILE__ ) . 'inc/shizumi.php';
 
-
+add_filter(
+	'snow_monkey_get_template_part_args',
+	function( $args ) {
+		if ( 'template-parts/content/prev-next-nav' === $args['slug'] ) {
+			$args['vars']['_in_same_term'] = true;
+			$args['vars']['_taxonomy'] = 'grade';
+		}
+		return $args;
+	}
+);
