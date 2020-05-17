@@ -16,3 +16,19 @@ $theme = wp_get_theme( get_template() );
 if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) {
 	return;
 }
+
+
+// すどうさん
+require plugin_dir_path( __FILE__ ) . 'inc/sudo.php';
+
+
+
+
+
+
+
+
+// しずみ
+require plugin_dir_path( __FILE__ ) . 'inc/shizumi.php';
+
+
