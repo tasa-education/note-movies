@@ -24,8 +24,9 @@ class noteMoviesSearch {
 	 */
 	public function get_posts_by_post_type( $query ) {
 		if ( $query->is_search() && $query->is_main_query() && !is_admin() ) {
-			$query->set( 'post_type', array( 'movies' ) );
+			$query->set( 'post_type', 'movies' );
 		}
+		return $query;
 	}
 }
 endif;
