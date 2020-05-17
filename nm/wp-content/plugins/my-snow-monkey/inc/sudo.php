@@ -15,21 +15,18 @@
 /**
  * 検索機能カスタマイズ
  */
-if (!class_exists('noteMoviesSearch')) :
+if ( !class_exists( 'noteMoviesSearch' ) ) :
 class noteMoviesSearch {
 
 
 	/**
 	 * 検索できるpost_typeを限定
 	 */
-	public function get_posts_by_post_type($query) {
-		if ($query->is_search() && $query->is_main_query() && !is_admin()) {
-			$get_post_type = get_query_var('post_type');
-
-			if ($get_post_type === 'movies') {
-				$query->set('post_type', array('movies'));
-			}
+	public function get_posts_by_post_type( $query ) {
+		if ( $query->is_search() ) {
+			$query->set( 'post_type', 'movies' );
 		}
+		return $query;
 	}
 }
 endif;
