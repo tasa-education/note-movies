@@ -1,12 +1,20 @@
 <?php
 /**
- * [*ここにこのファイルの概要を記載します。]
- *
- * [*ここにこのファイルの説明を記載します。]
- *
- * @link [関数やメソッド等の追加情報へのリンク]
+ * しずみ対応分処理
  *
  * @package do_actionJapan2020
- * @subpackage [ファイル内のすべての関数や定義が属するコンポーネントを指定する]
- * @since x.x.x [ファイルが追加されたバージョンを指定する]
+ * @since 1.0.0
  */
+
+class Shizumi {
+	public function __construct() {
+		add_filter( 'inc2734_wp_view_controller_template_part_root_hierarchy', array( $this, 'custom_root_hierarchy' ) );
+	}
+
+	public function custom_root_hierarchy( $hierarchy ) {
+		$hierarchy[] = MY_SNOW_MONKEY_PATH;
+		return $hierarchy;
+	}
+}
+
+new Shizumi();
