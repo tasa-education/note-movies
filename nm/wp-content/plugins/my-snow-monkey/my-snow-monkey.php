@@ -17,6 +17,7 @@ if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->t
 	return;
 }
 
+define( 'MY_SNOW_MONKEY_PATH', plugin_dir_path( __FILE__ ) );
 
 // すどうさん
 require plugin_dir_path( __FILE__ ) . 'inc/sudo.php';
@@ -33,6 +34,7 @@ add_action( 'pre_get_posts', array( $nm_search, 'get_posts_by_post_type' ) );
 
 
 // しずみ
+require plugin_dir_path( __FILE__ ) . 'inc/class-my-snow-monkey-utility.php';
 require plugin_dir_path( __FILE__ ) . 'inc/shizumi.php';
 
 

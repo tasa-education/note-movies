@@ -1,0 +1,131 @@
+@import 'core/core';
+@import '../../node_modules/sass-basis/src/css/basis-core';
+
+@mixin smf-button {
+  cursor: pointer;
+  display: inline-block;
+  @include _form-control-base-border();
+  background-color: _lighter($_color-gray);
+  background-image: linear-gradient(180deg, #fff, _lighter($_color-gray));
+  border-radius: $_border-radius;
+  color: $_color-text;
+  @include _padding(.25, .5);
+  text-decoration: none;
+}
+
+.smf-item {
+  &__description {
+    @include _margin-top(.125);
+    color: _dark($_color-gray);
+    @include _font-size-line-height($_base-font-size-px - 2px);
+  }
+}
+
+.smf-form .smf-item {
+  .smf-text-control,
+  .smf-textarea-control {
+    &__control {
+      @include _form-control();
+    }
+  }
+
+  .smf-textarea-control {
+    &__control {
+      display: block;
+    }
+  }
+
+  .smf-checkboxes-control,
+  .smf-radio-buttons-control {
+    &__control {
+      > .smf-label + .smf-label {
+        @include _margin-left(.5);
+      }
+    }
+  }
+
+  .smf-checkbox-control,
+  .smf-radio-button-control {
+    &__control {
+      @include _margin-right(.25);
+
+      &::before {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  .smf-checkbox-control {
+    @include _checkbox();
+  }
+
+  .smf-radio-button-control {
+    @include _radio();
+  }
+
+  .smf-select-control {
+    @include _select();
+  }
+
+  .smf-file-control {
+    &__label,
+    &__filename {
+      display: none;
+    }
+
+    @supports (appearance: none) or (-webkit-appearance: none) or (-moz-appearance: none) {
+      > label {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        > * {
+          flex: 0 0 auto;
+        }
+      }
+
+      &__control {
+        display: none;
+      }
+
+      &__label {
+        @include smf-button();
+      }
+
+      &__filename {
+        margin-left: 1em;
+        display: inline-block;
+      }
+
+      &__value {
+        margin-top: .25em;
+      }
+    }
+  }
+
+  [data-invalid="1"] {
+    border-color: #d98585;
+  }
+}
+
+.smf-action {
+  .smf-button-control {
+    &__control {
+      @include smf-button();
+    }
+  }
+}
+
+.smf-system-error-content-ready {
+  display: none !important;
+}
+
+.smf-item[tabindex="-1"],
+.smf-complete-content[tabindex="-1"],
+.smf-system-error-content[tabindex="-1"] {
+  outline: none;
+}
+
+@import 'block-styles/app';
+@import 'component/component';

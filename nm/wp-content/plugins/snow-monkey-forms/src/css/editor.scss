@@ -1,0 +1,29 @@
+@import 'core/core';
+@import '../../node_modules/sass-basis/src/css/basis-core';
+
+.snow-monkey-forms-setting-panel {
+  .components-panel__header {
+    color: #555d66;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.is-selected [data-type="snow-monkey-forms/item"] .block-list-appender {
+  display: none !important;
+}
+
+.editor-styles-wrapper .block-editor-writing-flow {
+  @import 'app';
+
+  .smf-select-control__control {
+    background-image: none;
+  }
+
+  .smf-textarea-control__control {
+    resize: none;
+  }
+}
+
+@import 'block-styles/editor';
+@import 'component/component';
