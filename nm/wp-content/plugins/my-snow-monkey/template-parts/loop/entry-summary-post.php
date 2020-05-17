@@ -21,6 +21,9 @@ $template_args = [
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">
 				<?php Helper::get_template_part( 'template-parts/loop/entry-summary/title/title', 'post' ); ?>
+				<?php if ( MySnowMonkeyUtility::is_lower_days() ) : ?>
+					<span>new</span>
+				<?php endif; ?>
 			</header>
 			<?php if ( 'movies' === get_post_type() ) : ?>
 				<?php $terms = get_the_terms( get_the_ID(), 'movie_tag' ); ?>
@@ -44,7 +47,9 @@ $template_args = [
 			);
 			?>
 
-			<?php Helper::get_template_part( 'template-parts/loop/entry-summary/meta/meta', 'post' ); ?>
+			<?php if ( 'movies' !== get_post_type() ) : ?>
+				<?php Helper::get_template_part( 'template-parts/loop/entry-summary/meta/meta', 'post' ); ?>
+			<?php endif; ?>
 		</div>
 	</section>
 </a>

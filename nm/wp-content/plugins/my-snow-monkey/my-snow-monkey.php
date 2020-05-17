@@ -30,6 +30,7 @@ require plugin_dir_path( __FILE__ ) . 'inc/sudo.php';
 
 
 // しずみ
+require plugin_dir_path( __FILE__ ) . 'inc/class-my-snow-monkey-utility.php';
 require plugin_dir_path( __FILE__ ) . 'inc/shizumi.php';
 
 
