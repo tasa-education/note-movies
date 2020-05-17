@@ -1,22 +1,19 @@
 <?php
 /**
- * [*ここにこのファイルの概要を記載します。]
- *
- * [*ここにこのファイルの説明を記載します。]
- *
- * @link [関数やメソッド等の追加情報へのリンク]
+ * 検索機能カスタマイズ
  *
  * @package do_actionJapan2020
- * @subpackage [ファイル内のすべての関数や定義が属するコンポーネントを指定する]
- * @since x.x.x [ファイルが追加されたバージョンを指定する]
+ * @since 1.0.0
  */
 
 
-/**
- * 検索機能カスタマイズ
- */
 if ( !class_exists( 'noteMoviesSearch' ) ) :
 class noteMoviesSearch {
+
+
+	public function __construct() {
+		add_action( 'pre_get_posts', array( $this, 'get_posts_by_post_type' ) );
+	}
 
 
 	/**
@@ -29,4 +26,5 @@ class noteMoviesSearch {
 		return $query;
 	}
 }
+new noteMoviesSearch();
 endif;
