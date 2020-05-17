@@ -17,6 +17,7 @@ if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->t
 	return;
 }
 
+define( 'MY_SNOW_MONKEY_PATH', plugin_dir_path( __FILE__ ) );
 
 // すどうさん
 require plugin_dir_path( __FILE__ ) . 'inc/sudo.php';
