@@ -23,7 +23,7 @@ require plugin_dir_path( __FILE__ ) . 'inc/sudo.php';
 $nm_search = new noteMoviesSearch();
 
 // 検索できるpost_typeを限定
-add_action('pre_get_posts', array($nm_search, 'get_posts_by_post_type'));
+add_action( 'pre_get_posts', array( $nm_search, 'get_posts_by_post_type' ) );
 
 
 
