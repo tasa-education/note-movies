@@ -23,7 +23,7 @@ class noteMoviesSearch {
 	 * 検索できるpost_typeを限定
 	 */
 	public function get_posts_by_post_type( $query ) {
-		if ( $query->is_search() && $query->is_main_query() && !is_admin() ) {
+		if ( $query->is_search() ) {
 			$query->set( 'post_type', 'movies' );
 		}
 		return $query;
