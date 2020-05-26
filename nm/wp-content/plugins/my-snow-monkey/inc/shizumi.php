@@ -8,7 +8,7 @@
 
 class Shizumi {
 	public function __construct() {
-		add_filter( 'inc2734_wp_view_controller_template_part_root_hierarchy', array( $this, 'custom_root_hierarchy' ) );
+		add_filter( 'snow_monkey_template_part_root_hierarchy', array( $this, 'custom_root_hierarchy' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts' ) );
 		add_action( 'snow_monkey_entry_meta_items', array( $this, 'movie_tag_published' ), 50 );
 	}
