@@ -1,0 +1,663 @@
+body {
+  color: #2C2D2D;
+}
+
+.notebook {
+  padding: 2px 31px 38px;
+  line-height: 40px;
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/note.png);
+  background-size: 500px 40px;
+  background-position: left -38px;
+  margin-bottom: 2px;
+}
+
+.notebook:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .notebook {
+    line-height: 38px;
+    background-position: left -36px;
+    background-size: 500px 38px;
+    padding: 2px 14px 36px;
+    font-size: 0.86rem;
+  }
+}
+
+.notebook + .notebook {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .l-header__content .c-site-branding {
+    position: absolute;
+    left: 17px;
+    top: 4px;
+  }
+}
+
+.smb-section {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+@media (max-width: 800px) {
+  .smb-section {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .smb-section {
+    margin-top: 7vw;
+    margin-bottom: 7vw;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+  }
+}
+
+.smb-recent-posts .c-entry-summary__title {
+  font-size: 1rem;
+}
+
+.smb-recent-posts .c-entry-summary__content {
+  font-size: 0.85rem;
+}
+
+.p-global-nav .c-navbar__item > a {
+  color: #2C2D2D !important;
+  font-weight: normal;
+}
+
+.p-global-nav .c-navbar__item > a:hover {
+  color: #1398BB !important;
+}
+
+.p-global-nav .c-navbar__item + .c-navbar__item:before {
+  content: "/";
+  padding-top: 13px;
+  color: #ccc;
+}
+
+.p-global-nav .c-navbar__item[data-active-menu="true"] > a {
+  color: #1398BB !important;
+}
+
+.c-header-content {
+  position: absolute;
+  left: 18px;
+  top: 10px;
+}
+
+.l-center-header[data-has-global-nav="true"] .l-center-header__row:first-child {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+@media (min-width: 1024px) {
+  .l-center-header[data-has-global-nav="true"] .l-center-header__row:first-child {
+    margin-bottom: 14px;
+    margin-top: 32px;
+  }
+}
+
+.p-section-front-page-content .block-navigation {
+  margin-top: 0 !important;
+}
+
+.p-section-front-page-content .block-navigation .block-search {
+  padding: 0 0 20px !important;
+  margin-top: -50px;
+}
+
+@media (max-width: 800px) {
+  .p-section-front-page-content .block-navigation .block-search {
+    margin-top: -7vw;
+  }
+  .p-section-front-page-content .block-navigation .block-search div {
+    max-width: 260px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .p-section-front-page-content .block-navigation .block-search {
+    margin-top: -9vw;
+  }
+}
+
+.p-section-front-page-content .block-navigation .block-search input[type="search"] {
+  text-align: center !important;
+}
+
+.wp-block-search__input {
+  padding: 9px;
+  border-radius: 34px !important;
+  border: 1px solid #2C2D2D !important;
+}
+
+.wp-block-search__button {
+  right: 6px !important;
+}
+
+@media (max-width: 800px) {
+  .wp-block-search__input {
+    padding: 5px;
+    border-radius: 28px !important;
+  }
+}
+
+.wp-block-search__button {
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/ico_search.png) !important;
+  background-size: 30px 30px !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+.p-section-front-page-content .block-navigation .block-search input[type="search"] {
+  padding-right: 23px !important;
+}
+
+.video_box_wrap {
+  text-align: center;
+  padding: 0 10vw;
+  margin-top: 4vw !important;
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/zukei_bk.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.video_box_inner {
+  max-width: 700px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide_text_mini {
+  padding-left: 10px;
+}
+
+.smb-section.message {
+  border: 0 !important;
+  text-align: center;
+}
+
+.smb-section.message .smb-section__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .smb-section.message .smb-section__title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .smb-section.message .smb-section__title {
+    font-size: 1.5rem;
+  }
+}
+
+.smb-section.message .smb-section__title:after {
+  content: none;
+  background-color: transparent !important;
+}
+
+.smb-section.message .smb-section__body {
+  margin: 0;
+}
+
+.smb-section.message .notebook {
+  text-align: center !important;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 42px 31px 41px;
+}
+
+@media (max-width: 800px) {
+  .smb-section.message .notebook {
+    margin-top: -26px;
+    text-align: left !important;
+    padding: 36px 20px 8px;
+    line-height: 36px;
+    background-size: 500px 36px;
+  }
+}
+
+.h2_top_tit {
+  text-align: center;
+  border: none !important;
+  background-color: transparent !important;
+  margin-top: 0;
+  margin-bottom: 1rem !important;
+  margin-left: 26px;
+}
+
+@media screen and (max-width: 640px) {
+  .h2_top_tit {
+    margin-left: 23px;
+  }
+}
+
+.h2_top_tit span {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 640px) {
+  .h2_top_tit span {
+    font-size: 1.1rem;
+  }
+}
+
+.h2_top_tit span:after {
+  display: block;
+  content: "";
+  width: calc(100% + 10px);
+  background-color: #c2e4f5;
+  height: 2px;
+  margin-top: 0.6rem;
+  margin-left: -20px;
+}
+
+.h2_top_tit span:before {
+  content: " ";
+  display: block;
+  width: 52px;
+  height: 48px;
+  position: absolute;
+  left: -56px;
+  top: -0.3rem;
+  background-size: contain;
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/ico_camera.png);
+}
+
+@media screen and (max-width: 640px) {
+  .h2_top_tit span:before {
+    width: 46px;
+    height: 40px;
+    left: -50px;
+    top: -0.14rem;
+  }
+}
+
+.h2_top_tit.h2_tit_pickup span:after {
+  background-color: #b7dbd2;
+}
+
+.h2_top_tit.h2_tit_pickup span:before {
+  left: -53px;
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/ico_pencil.png);
+}
+
+@media screen and (max-width: 640px) {
+  .h2_top_tit.h2_tit_pickup span:before {
+    left: -44px;
+  }
+}
+
+.h2_top_tit.h2_tit_news span:after {
+  background-color: #f1d3e2;
+}
+
+.h2_top_tit.h2_tit_news span:before {
+  left: -58px;
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/ico_news.png);
+}
+
+@media screen and (max-width: 640px) {
+  .h2_top_tit.h2_tit_news span:before {
+    left: -51px;
+  }
+}
+
+/*
+ * Top Page movie list
+ */
+#movielist .smb-section__inner > .c-container {
+  max-width: 800px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  #movielist .smb-section__inner > .c-container {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+
+.p-section-front-page-content .section-movielist .wp-block-snow-monkey-blocks-box {
+  padding: 0;
+  border: none;
+}
+
+.p-section-front-page-content .section-movielist .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-section-front-page-content .section-movielist .wp-block-button {
+  flex-basis: calc(100% / 4) !important;
+  margin: 0 !important;
+  padding: 5px !important;
+}
+
+.p-section-front-page-content .section-movielist .wp-block-button a {
+  width: 100%;
+  padding: 12px 10px 13px !important;
+  font-size: 1rem !important;
+  line-height: 1.2;
+}
+
+@media (max-width: 1023px) {
+  .p-section-front-page-content .section-movielist .wp-block-button a {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-section-front-page-content .section-movielist .wp-block-button {
+    flex-basis: calc(100% / 3) !important;
+  }
+  .p-section-front-page-content .section-movielist .wp-block-button a {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .p-section-front-page-content .section-movielist .wp-block-button {
+    flex-basis: calc(100% / 2) !important;
+  }
+}
+
+.block-els .wp-block-button__link,
+.block-jhs .wp-block-button__link,
+.block-hs .wp-block-button__link {
+  border: 2px solid !important;
+  border-color: rgba(44, 150, 175, 0.3) !important;
+  color: #2c96af !important;
+  font-weight: bold !important;
+  font-family: "Kosugi Maru";
+}
+
+.block-els .wp-block-button__link:hover,
+.block-jhs .wp-block-button__link:hover,
+.block-hs .wp-block-button__link:hover {
+  background-color: #2c96af !important;
+  color: #fff !important;
+}
+
+.block-jhs .wp-block-button__link {
+  border-color: rgba(234, 127, 35, 0.3) !important;
+  color: #ea7f23 !important;
+}
+
+.block-jhs .wp-block-button__link:hover {
+  background-color: #ea7f23 !important;
+  color: #fff !important;
+}
+
+.block-hs .wp-block-button__link {
+  border-color: rgba(214, 79, 128, 0.3) !important;
+  color: #d64f80 !important;
+}
+
+.block-hs .wp-block-button__link:hover {
+  background-color: #d64f80 !important;
+  color: #fff !important;
+}
+
+.smb-box.block-navigation {
+  border: none;
+}
+
+.smb-box.block-recruitment {
+  padding: 30px;
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 640px) {
+  .smb-box.block-recruitment {
+    padding: 7vw;
+  }
+}
+
+.smb-box.block-recruitment h3 {
+  font-size: 1.3rem;
+}
+
+.smb-box.block-recruitment .wp-block-column:first-child {
+  flex-basis: 30% !important;
+  margin: 0 !important;
+}
+
+.smb-box.block-recruitment .wp-block-column:not(:first-child) {
+  flex-basis: 70% !important;
+  padding-left: 34px !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 800px) {
+  .smb-box.block-recruitment .wp-block-column:first-child {
+    flex-basis: 24% !important;
+  }
+  .smb-box.block-recruitment .wp-block-column:not(:first-child) {
+    flex-basis: 76% !important;
+    padding-left: 28px !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .smb-box.block-recruitment .wp-block-column:first-child {
+    flex-basis: 100% !important;
+    margin-bottom: 1.2em !important;
+    text-align: center;
+  }
+  .smb-box.block-recruitment .wp-block-column:first-child figure {
+    margin: 0 auto;
+  }
+  .smb-box.block-recruitment .wp-block-column:not(:first-child) {
+    flex-basis: 100% !important;
+    padding-left: 0 !important;
+  }
+  .smb-box.block-recruitment .wp-block-button .wp-block-button__link {
+    width: 100%;
+  }
+}
+
+.l-contents {
+  padding-bottom: 3em;
+}
+
+.smb-section + .smb-section {
+  border-top: 1px solid #eee;
+}
+
+.bt-blue {
+  border-radius: 2px;
+  background-color: #1398BB;
+  color: #fff;
+}
+
+.bt-blue:hover {
+  background-color: #26abce;
+  color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+  .smb-section__inner > .c-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term {
+  border-radius: calc(var(--_space, 1.76923rem)*0.5);
+  top: 5px;
+  right: 5px;
+  font-family: "Kosugi Maru";
+}
+
+.smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-3, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-4, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-5, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-6, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-7, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-8, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-18, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-19 {
+  background-color: #2c96af;
+}
+
+.smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-9, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-10, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-11 {
+  background-color: #ea7f23;
+}
+
+.smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-23, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-24, .smb-taxonomy-posts .c-entry-summary__figure .c-entry-summary__term.c-entry-summary__term--grade-25 {
+  background-color: #d64f80;
+}
+
+ul.movie_tag {
+  margin: 0;
+}
+
+.movie_tag {
+  display: inline-block;
+  font-size: 12px;
+  list-style: none;
+}
+
+.movie_tag li {
+  display: inline-block;
+  color: #2c96af;
+  padding: 2px 7px;
+  border-radius: 1px;
+  border: 1px solid #2c96af;
+  margin-right: 2px;
+  margin-bottom: 4px;
+}
+
+.c-entries__item {
+  position: relative;
+}
+
+.c-entry-summary {
+  position: relative;
+}
+
+.c-entry-summary__header .c-entry-summary__title {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .c-entry-summary__header .c-entry-summary__title {
+    font-size: 1rem;
+  }
+}
+
+.c-entry-summary__header .c-entry-summary__title + span {
+  position: absolute;
+  margin: 0;
+  left: 4px;
+  top: 4px;
+  padding: 0.3rem 0.5rem;
+  color: #ecf769;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 640px) {
+  .c-entry-summary__header .c-entry-summary__title + span {
+    display: none;
+  }
+}
+
+.c-entry-summary__header .c-entry-summary__title + span:after {
+  content: "!";
+}
+
+.c-entries--simple .c-entry-summary__header span {
+  margin: 0;
+}
+
+.c-entry-summary__title {
+  display: inline-block;
+}
+
+.c-entry-summary__title + span {
+  margin-left: 1em;
+}
+
+.p-breadcrumbs-wrapper {
+  margin-bottom: 62px;
+}
+
+@media (max-width: 800px) {
+  .p-breadcrumbs-wrapper {
+    margin-bottom: 52px;
+  }
+}
+
+.c-entry__header {
+  margin-bottom: 3rem;
+}
+
+.c-entry__header .c-entry__title {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 800px) {
+  .c-entry__header .c-entry__title {
+    font-size: 1.4rem;
+  }
+}
+
+.l-footer-widget-area {
+  border-top: 0;
+}
+
+.bt_line {
+  text-align: center;
+}
+
+.bt_line a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1;
+  height: 48px;
+  padding: 15px 30px 14px 80px;
+  background-color: #00b900;
+  color: #fff;
+  border-radius: 8px;
+  font-family: "Kosugi Maru";
+}
+
+.bt_line a:after {
+  display: block;
+  opacity: 1;
+  content: " ";
+  width: 30px;
+  height: 30px;
+  background-image: url(https://note-movies.com/nm/wp-content/plugins/my-snow-monkey/assets/css/imgs/lineicon.png);
+  background-size: 30px auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.bt_line a:hover {
+  background-color: #3cbe0d;
+}
